@@ -36,14 +36,14 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     
-    const validateEmail = async (email, showError = true) => {
+    const validateEmail = async (email, isShowError = true) => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
         if (!email) {
-            if (showError) showError('email', 'Email is required');
+            if (isShowError) showError('email', 'Email is required');
             return false;
         }
         if (!emailRegex.test(email)) {
-            if (showError) showError('email', 'Please enter a valid email address (example: name@domain.com)');
+            if (isShowError) showError('email', 'Please enter a valid email address (example: name@domain.com)');
             return false;
         }
         clearError('email');
@@ -51,14 +51,14 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
    
-    const validateUsername = async (username, showError = true) => {
+    const validateUsername = async (username, isShowError = true) => {
         const usernameRegex = /^[a-zA-Z0-9_-]{3,20}$/;
         if (!username) {
-            if (showError) showError('username', 'Username is required');
+            if (isShowError) showError('username', 'Username is required');
             return false;
         }
         if (!usernameRegex.test(username)) {
-            if (showError) showError('username', 'Username must be 3-20 characters and can only contain letters, numbers, underscores, and hyphens');
+            if (isShowError) showError('username', 'Username must be 3-20 characters and can only contain letters, numbers, underscores, and hyphens');
             return false;
         }
         clearError('username');

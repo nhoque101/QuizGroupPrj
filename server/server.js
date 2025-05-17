@@ -12,8 +12,8 @@ require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key';
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://naimul991:lk4OwzfPbX5VF2cW@cluster0.pszjzn0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+const JWT_SECRET = process.env.JWT_SECRET;
+const MONGODB_URI = process.env.MONGODB_URI;
 
 let isConnectedToMongo = false;
 

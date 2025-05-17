@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Results</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">
+            <i class="fas fa-brain"></i>
+            Quiz Master
+        </a>
+        <button class="hamburger-menu" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+            <a href="leaderboard.html" class="nav-link"><i class="fas fa-trophy"></i> Leaderboard</a>
+            <a href="profile.html" class="nav-link auth-only"><i class="fas fa-user"></i> Profile</a>
+            <a href="#" class="nav-link auth-only" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            <a href="login.html" class="nav-link guest-only"><i class="fas fa-sign-in-alt"></i> Login</a>
+            <a href="signup.html" class="nav-link guest-only"><i class="fas fa-user-plus"></i> Sign Up</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="results-container">
+            <div class="score-circle">
+                <div class="score-percentage" id="score-percentage">0%</div>
+                <div class="score-fraction" id="score-fraction">0/0</div>
+            </div>
+            
+            <div class="stats-container">
+                <div class="stat-item">
+                    <i class="fas fa-clock stat-icon"></i>
+                    <div class="stat-text">
+                        <span class="stat-label">Time Taken:</span>
+                        <span class="stat-value" id="time-taken">0 seconds</span>
+                    </div>
+                </div>
+                
+                <div class="stat-item">
+                    <i class="fas fa-check-circle stat-icon"></i>
+                    <div class="stat-text">
+                        <span class="stat-label">Correct Answers:</span>
+                        <span class="stat-value" id="correct-answers">0</span>
+                    </div>
+                </div>
+                
+                <div class="stat-item">
+                    <i class="fas fa-times-circle stat-icon"></i>
+                    <div class="stat-text">
+                        <span class="stat-label">Wrong Answers:</span>
+                        <span class="stat-value" id="wrong-answers">0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="performance-message" id="performance-message">
+                Keep practicing to improve!
+            </div>
+            
+            <div class="action-buttons">
+                <button id="show-answers-btn" class="btn secondary-btn">Show Answer Details</button>
+                <button id="retry-btn" class="btn retry-btn">Retry with Same Settings</button>
+                <button id="new-settings-btn" class="btn primary-btn">Play with New Settings</button>
+            </div>
+            
+            <div id="answers-details" class="answers-details hidden">
+                <h3>Answer Details</h3>
+                <div id="answers-list" class="answers-list">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Quiz Master App | Project 2</p>
+    </footer>
+    
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/results.js"></script>
+</body>
+</html>

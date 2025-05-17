@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard - Quiz Master</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">
+            <i class="fas fa-brain"></i>
+            Quiz Master
+        </a>
+        <button class="hamburger-menu" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+            <a href="profile.html" class="nav-link auth-only"><i class="fas fa-user"></i> Profile</a>
+            <a href="leaderboard.html" class="nav-link active"><i class="fas fa-trophy"></i> Leaderboard</a>
+            <a href="#" class="nav-link auth-only" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            <a href="login.html" class="nav-link guest-only"><i class="fas fa-sign-in-alt"></i> Login</a>
+            <a href="signup.html" class="nav-link guest-only"><i class="fas fa-user-plus"></i> Sign Up</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="leaderboard-page-layout">
+            <div class="user-stats-section auth-only">
+                <div class="profile-card">
+                    <h2>Your Overall Stats</h2>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <label>Total Questions</label>
+                            <span id="totalQuestions">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <label>Correct Answers</label>
+                            <span id="correctAnswers">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <label>Accuracy</label>
+                            <span id="accuracy">0%</span>
+                        </div>
+                        <div class="stat-item">
+                            <label>Quizzes Taken</label>
+                            <span id="quizzesTaken">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <h2>Your Top Categories</h2>
+                    <div class="categories-table">
+                        <div class="table-header">
+                            <span>Category</span>
+                            <span>Correct</span>
+                            <span>Total Ques</span>
+                            <span>Accuracy</span>
+                        </div>
+                        <div id="topCategories" class="table-body">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="leaderboard-container">
+                <div class="leaderboard-header">
+                    <h1>Leaderboard</h1>
+                    <div class="view-toggle">
+                        <button class="toggle-btn active" data-view="overall">Overall</button>
+                        <button class="toggle-btn" data-view="category">By Category</button>
+                    </div>
+                </div>
+
+                <div class="category-selector hidden">
+                    <select id="categorySelect">
+                        <option value="General Knowledge">General Knowledge</option>
+                        <option value="Entertainment: Books">Books</option>
+                        <option value="Entertainment: Film">Film</option>
+                        <option value="Entertainment: Music">Music</option>
+                        <option value="Entertainment: Musicals & Theatres">Musicals & Theatres</option>
+                        <option value="Entertainment: Television">Television</option>
+                        <option value="Entertainment: Video Games">Video Games</option>
+                        <option value="Entertainment: Board Games">Board Games</option>
+                        <option value="Science & Nature">Science & Nature</option>
+                        <option value="Science: Computers">Computers</option>
+                        <option value="Science: Mathematics">Mathematics</option>
+                        <option value="Mythology">Mythology</option>
+                        <option value="Sports">Sports</option>
+                        <option value="Geography">Geography</option>
+                        <option value="History">History</option>
+                        <option value="Politics">Politics</option>
+                        <option value="Art">Art</option>
+                        <option value="Celebrities">Celebrities</option>
+                        <option value="Animals">Animals</option>
+                        <option value="Vehicles">Vehicles</option>
+                        <option value="Entertainment: Comics">Comics</option>
+                        <option value="Science: Gadgets">Gadgets</option>
+                        <option value="Entertainment: Japanese Anime & Manga">Japanese Anime & Manga</option>
+                        <option value="Entertainment: Cartoon & Animations">Cartoon & Animations</option>
+                    </select>
+                </div>
+
+                <div class="leaderboard-table">
+                    <div class="table-header">
+                        <div class="rank">Rank</div>
+                        <div class="username">Username</div>
+                        <div class="correct">Correct Answers</div>
+                        <div class="attempted">Questions Attempted</div>
+                        <div class="accuracy">Accuracy</div>
+                    </div>
+                    <div id="leaderboardEntries" class="table-body">
+                        <div class="loading">Loading leaderboard data...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Quiz Master App | Project 2</p>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/leaderboard.js"></script>
+</body>
+</html> 

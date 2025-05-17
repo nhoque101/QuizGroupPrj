@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Successful - Quiz Master</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .success-container {
+            text-align: center;
+            padding: 40px 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .success-icon {
+            color: var(--success-color);
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+        .success-message {
+            color: var(--success-color);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        .welcome-message {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: var(--secondary-color);
+        }
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        .action-button {
+            padding: 12px 24px;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .start-quiz {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        .start-quiz:hover {
+            background-color: #3730a3;
+        }
+        .view-profile {
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+        .view-profile:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">
+            <i class="fas fa-brain"></i>
+            Quiz Master
+        </a>
+        <a href="index.html" class="nav-link">
+            <i class="fas fa-home"></i>
+            Home
+        </a>
+    </nav>
+
+    <div class="container">
+        <div class="success-container">
+            <i class="fas fa-check-circle success-icon"></i>
+            <h2 class="success-message">Account Created Successfully!</h2>
+            <p class="welcome-message">Welcome to Quiz Master, <span id="username"></span>!</p>
+            <div class="action-buttons">
+                <a href="index.html" class="action-button start-quiz">
+                    <i class="fas fa-play"></i>
+                    Start Quiz
+                </a>
+                <a href="#" class="action-button view-profile">
+                    <i class="fas fa-user"></i>
+                    View Profile
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const username = urlParams.get('username');
+            
+            if (username) {
+                document.getElementById('username').textContent = username;
+            }
+        });
+    </script>
+</body>
+</html> 

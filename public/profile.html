@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Quiz Master</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">
+            <i class="fas fa-brain"></i>
+            Quiz Master
+        </a>
+        <button class="hamburger-menu" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+            <a href="leaderboard.html" class="nav-link"><i class="fas fa-trophy"></i> Leaderboard</a>
+            <a href="profile.html" class="nav-link auth-only active"><i class="fas fa-user"></i> Profile</a>
+            <a href="#" class="nav-link auth-only" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            <a href="login.html" class="nav-link guest-only"><i class="fas fa-sign-in-alt"></i> Login</a>
+            <a href="signup.html" class="nav-link guest-only"><i class="fas fa-user-plus"></i> Sign Up</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="profile-header">
+            <div class="profile-info">
+                <h1 id="username">Loading...</h1>
+                <p class="join-date" id="joinDate">Joined: Loading...</p>
+            </div>
+            <button class="btn primary-btn" id="takeQuizBtn">Take Quiz</button>
+        </div>
+
+        <div class="profile-content">
+            <div class="profile-card">
+                <h2>Overall Stats</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <label>Total Questions</label>
+                        <span id="totalQuestions">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <label>Correct Answers</label>
+                        <span id="correctAnswers">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <label>Accuracy</label>
+                        <span id="accuracy">0%</span>
+                    </div>
+                    <div class="stat-item">
+                        <label>Quizzes Taken</label>
+                        <span id="quizzesTaken">0</span>
+                    </div>
+                </div>
+                <div class="performance-message" id="performanceMessage"></div>
+            </div>
+
+            <div class="profile-card">
+                <h2>Top Categories</h2>
+                <div class="categories-table">
+                    <div class="table-header">
+                        <span>Category</span>
+                        <span>Total Correct</span>
+                        <span>Total Ques</span>
+                        <span>Accuracy</span>
+                    </div>
+                    <div id="topCategories" class="table-body">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="recent-quizzes">
+            <h2>Recent Quizzes</h2>
+            <div id="quizHistory" class="quiz-history">
+            </div>
+            <div class="quiz-history-navigation">
+                <button id="prevQuizzes" class="nav-btn" disabled>
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button id="nextQuizzes" class="nav-btn" disabled>
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div id="noQuizzes" class="no-quizzes hidden">
+                <p>You haven't taken any quizzes yet!</p>
+                <button class="btn primary-btn" onclick="window.location.href='index.html'">Take Your First Quiz</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Quiz Master App | Project 2</p>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html> 

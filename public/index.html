@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Master</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">
+            <i class="fas fa-brain"></i>
+            Quiz Master
+        </a>
+        <button class="hamburger-menu" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a>
+            <a href="leaderboard.html" class="nav-link"><i class="fas fa-trophy"></i> Leaderboard</a>
+            <a href="login.html" class="nav-link"><i class="fas fa-sign-in-alt"></i> Login</a>
+            <a href="signup.html" class="nav-link"><i class="fas fa-user-plus"></i> Sign Up</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Quiz Master</h1>
+        
+        <div class="home-content">
+            <div class="settings-container">
+                <div class="setting-group">
+                    <label for="question-count">Number of Questions: <span id="question-count-value">10</span></label>
+                    <input type="range" id="question-count" min="5" max="20" value="10" class="slider">
+                </div>
+                
+                <div class="setting-group">
+                    <label for="category">Category:</label>
+                    <select id="category" class="category-select">
+                        <option value="9">General Knowledge</option>
+                        <option value="10">Entertainment: Books</option>
+                        <option value="11">Entertainment: Film</option>
+                        <option value="12">Entertainment: Music</option>
+                        <option value="13">Entertainment: Musicals & Theatres</option>
+                        <option value="14">Entertainment: Television</option>
+                        <option value="15">Entertainment: Video Games</option>
+                        <option value="16">Entertainment: Board Games</option>
+                        <option value="17">Science & Nature</option>
+                        <option value="18">Science: Computers</option>
+                        <option value="19">Science: Mathematics</option>
+                        <option value="20">Mythology</option>
+                        <option value="21">Sports</option>
+                        <option value="22">Geography</option>
+                        <option value="23">History</option>
+                        <option value="24">Politics</option>
+                        <option value="25">Art</option>
+                        <option value="26">Celebrities</option>
+                        <option value="27">Animals</option>
+                        <option value="28">Vehicles</option>
+                        <option value="29">Entertainment: Comics</option>
+                        <option value="30">Science: Gadgets</option>
+                        <option value="31">Entertainment: Japanese Anime & Manga</option>
+                        <option value="32">Entertainment: Cartoon & Animations</option>
+                    </select>
+                </div>
+                
+                <div class="setting-group">
+                    <label>Timer Settings:</label>
+                    <div class="timer-options">
+                        <div class="timer-option">
+                            <input type="radio" id="no-timer" name="timer-type" value="none" checked>
+                            <label for="no-timer">No Timer</label>
+                        </div>
+                        <div class="timer-option">
+                            <input type="radio" id="question-timer" name="timer-type" value="question">
+                            <label for="question-timer">Per Question Timer</label>
+                        </div>
+                        <div class="timer-option">
+                            <input type="radio" id="quiz-timer" name="timer-type" value="quiz">
+                            <label for="quiz-timer">Entire Quiz Timer</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="per-question-timer-container" class="setting-group timer-duration-container hidden">
+                    <label for="per-question-duration">Time per Question: <span id="per-question-duration-value">30</span> seconds</label>
+                    <input type="range" id="per-question-duration" min="5" max="120" value="30" class="slider">
+                </div>
+
+                <div id="entire-quiz-timer-container" class="setting-group timer-duration-container hidden">
+                    <label for="entire-quiz-duration">Quiz Duration: <span id="entire-quiz-duration-value">5</span> minutes</label>
+                    <input type="range" id="entire-quiz-duration" min="1" max="120" value="5" class="slider">
+                </div>
+                
+                <button id="start-quiz" class="btn primary-btn">Start Quiz</button>
+            </div>
+
+            <div class="instructions-panel">
+                <h2><i class="fas fa-info-circle"></i> How to Play</h2>
+                <div class="instruction-steps">
+                    <div class="step">
+                        <i class="fas fa-cog"></i>
+                        <span>1. Select the number of questions (5-20)</span>
+                    </div>
+                    <div class="step">
+                        <i class="fas fa-clock"></i>
+                        <span>2. Choose timer mode: none, per question, or entire quiz</span>
+                    </div>
+                    <div class="step">
+                        <i class="fas fa-check-circle"></i>
+                        <span>3. Click Start Quiz and answer the questions</span>
+                    </div>
+                    <div class="step">
+                        <i class="fas fa-trophy"></i>
+                        <span>4. View your score and check correct answers</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Quiz Master App | Project 2</p>
+    </footer>
+    
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

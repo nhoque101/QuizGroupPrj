@@ -1,0 +1,296 @@
+
+
+
+@media (max-width: 1199.98px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+
+@media (max-width: 991.98px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    .score-circle {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .score-percentage {
+        font-size: 2.5rem;
+    }
+}
+
+
+@media (max-width: 767.98px) {
+    .container {
+        max-width: 540px;
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    
+    .quiz-header, .results-header {
+        padding: 10px 15px;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .quiz-header h1, .results-header h1 {
+        margin-bottom: 10px;
+    }
+    
+    .nav-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .settings-container, .quiz-container, .results-container {
+        padding: 20px;
+    }
+    
+    .score-circle {
+        width: 150px;
+        height: 150px;
+        border-width: 8px;
+    }
+    
+    .score-percentage {
+        font-size: 2.2rem;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    .action-buttons button {
+        width: 100%;
+    }
+    
+    .modal {
+        width: 95%;
+    }
+}
+
+
+@media (max-width: 575.98px) {
+    .container {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .settings-container, .quiz-container, .results-container {
+        padding: 15px;
+    }
+    
+    .setting-group {
+        margin-bottom: 20px;
+    }
+    
+    .timer-options {
+        gap: 10px;
+    }
+    
+    .question-container h2 {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+    
+    .options-container {
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .option label {
+        padding: 12px;
+    }
+    
+    .navigation-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .navigation-buttons button {
+        width: 100%;
+    }
+    
+    .score-circle {
+        width: 120px;
+        height: 120px;
+        border-width: 6px;
+        margin-bottom: 20px;
+    }
+    
+    .score-percentage {
+        font-size: 1.8rem;
+    }
+    
+    .score-fraction {
+        font-size: 1rem;
+    }
+    
+    .stats-container {
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .stat-item {
+        gap: 10px;
+    }
+    
+    .stat-icon {
+        font-size: 1.2rem;
+        width: 25px;
+    }
+    
+    .performance-message {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+    
+    .modal-header, .modal-body, .modal-footer {
+        padding: 15px;
+    }
+    
+    .warning-icon {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+ 
+    .navbar {
+        padding: 0.75rem 1rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .navbar-brand i {
+        font-size: 1.4rem;
+    }
+
+    .auth-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    
+    .container {
+        padding: 20px 15px;
+    }
+
+    
+    .auth-card {
+        padding: 30px;
+    }
+
+    .auth-card h2 {
+        font-size: 1.8rem;
+    }
+
+    .auth-subtitle {
+        font-size: 1rem;
+    }
+
+    .form-group label {
+        font-size: 0.95rem;
+    }
+
+    .input-group input {
+        padding: 10px 35px;
+        font-size: 0.95rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    
+    .navbar {
+        padding: 0.5rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+
+    .navbar-brand i {
+        font-size: 1.3rem;
+    }
+
+    .navbar-auth {
+        gap: 0.5rem;
+    }
+
+    .auth-btn {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.85rem;
+    }
+
+    
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    
+    .auth-card {
+        padding: 20px;
+    }
+
+    .auth-card h2 {
+        font-size: 1.6rem;
+    }
+
+    .form-options {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .social-buttons {
+        flex-direction: column;
+    }
+
+    .social-btn {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    
+    .navbar-brand {
+        font-size: 1rem;
+    }
+
+    .navbar-brand i {
+        display: none;
+    }
+
+    .auth-btn {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+}

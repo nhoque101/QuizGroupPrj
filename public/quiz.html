@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Master</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">
+            <i class="fas fa-brain"></i>
+            Quiz Master
+        </a>
+        <button class="hamburger-menu" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+            <a href="leaderboard.html" class="nav-link"><i class="fas fa-trophy"></i> Leaderboard</a>
+            
+            <a href="profile.html" class="nav-link auth-only"><i class="fas fa-user"></i> Profile</a>
+            <a href="#" class="nav-link auth-only" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            <a href="login.html" class="nav-link guest-only"><i class="fas fa-sign-in-alt"></i> Login</a>
+            <a href="signup.html" class="nav-link guest-only"><i class="fas fa-user-plus"></i> Sign Up</a>
+        </div>
+    </nav>
+    
+    <div class="container">
+       
+        <div id="timer-display" class="timer-container">
+            <div class="timer">
+                <i class="fas fa-clock"></i> <span id="timer-value">00:00</span>
+            </div>
+        </div>
+        
+        <div class="quiz-container">
+            <div class="progress-container">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+            
+            <div class="question-info">
+                <span id="question-number">Question 1 of 10</span>
+            </div>
+            
+            <div id="question-container" class="question-container">
+                <h2 id="question-text">Loading question...</h2>
+                
+                <div class="options-container">
+                    <div class="option">
+                        <input type="radio" id="option-a" name="answer" value="A">
+                        <label for="option-a" id="label-a"><span class="option-letter">A</span> <span id="text-a">Loading...</span></label>
+                    </div>
+                    
+                    <div class="option">
+                        <input type="radio" id="option-b" name="answer" value="B">
+                        <label for="option-b" id="label-b"><span class="option-letter">B</span> <span id="text-b">Loading...</span></label>
+                    </div>
+                    
+                    <div class="option">
+                        <input type="radio" id="option-c" name="answer" value="C">
+                        <label for="option-c" id="label-c"><span class="option-letter">C</span> <span id="text-c">Loading...</span></label>
+                    </div>
+                    
+                    <div class="option">
+                        <input type="radio" id="option-d" name="answer" value="D">
+                        <label for="option-d" id="label-d"><span class="option-letter">D</span> <span id="text-d">Loading...</span></label>
+                    </div>
+                </div>
+                
+                <div id="error-message" class="error-message hidden">
+                    Please select an answer before proceeding.
+                </div>
+                
+                <div class="navigation-buttons">
+                    <button id="prev-btn" class="btn secondary-btn">Previous</button>
+                    <button id="next-btn" class="btn primary-btn">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="modal-overlay" class="modal-overlay hidden">
+        <div class="modal">
+            <div class="modal-header">
+                <i class="fas fa-exclamation-triangle warning-icon"></i>
+                <h3 id="modal-title">Confirmation</h3>
+            </div>
+            <div class="modal-body">
+                <p id="modal-message">Are you sure you want to quit? Your progress will be lost.</p>
+            </div>
+            <div class="modal-footer">
+                <button id="modal-confirm" class="btn primary-btn">Yes, Quit</button>
+                <button id="modal-cancel" class="btn secondary-btn">No, Continue</button>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Quiz Master App | Project 2</p>
+    </footer>
+    
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/quiz.js"></script>
+</body>
+</html>

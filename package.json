@@ -1,0 +1,24 @@
+{
+  "name": "quiz-app",
+  "version": "1.0.0",
+  "description": "Quiz application with Express.js backend",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^4.18.2",
+    "html-entities": "^2.6.0",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.6.8",
+    "node-fetch": "^2.6.9"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
